@@ -21,7 +21,7 @@ class JinaEmbeddings(Embeddings):
                 trust_remote_code=True,
                 attn_implementation='eager',
                 torch_dtype=torch.float16,
-                device_map='cuda'
+                device_map=self.device
             )
             print(f"Model loaded on {self.device}")
     
